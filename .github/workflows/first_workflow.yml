@@ -4,14 +4,20 @@ on:
   - push
 
 jobs: 
-  first_job: 
+  first_job:  
+    name: My updated Job
     runs-on: ubuntu-latest
     steps:
-      - name: Updated Welcome Message
-        run: echo "Welcome to the world of CICD with github actions"
+     - name: checkout code
+       uses: actions/checkout@v3
 
-      - name: List all Files including hidden ones
-        run: ls -a
-      - name: Print Working Directory
-        run: pwd
+
+     - name: Updated Welcome Message
+       run: echo "Welcome to the world of CICD with github actions"
+
+     - name: List all Files including hidden ones
+       run: ls -a
+
+     - name: Print Working Directory
+       run: pwd
     
