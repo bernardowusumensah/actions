@@ -7,10 +7,11 @@ jobs:
   first_job: 
     runs-on: ubuntu-latest
     steps:
-      - name: Welcome Message
-        run: echo "My first GitHub Actions Job"
+      - name: Updated Welcome Message
+        run: echo "Welcome to the world of CICD with github actions"
 
-      - name: List Files 
-        run: ls 
-
+      - name: List all Files including hidden ones
+        run: ls -a
+      - name: Print Working Directory
+        run: pwd
     
